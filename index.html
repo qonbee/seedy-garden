@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+	
+		<div id="gameScreen">
+			
+			<div class="row">
+				
+				<div class="col-1">
+					
+					<div id="locationMenu" class="row">
+						<div id="gardenButton" class="locationButton" onclick="selectLocation('garden');">Garden</div><div id="marketButton" class="locationButton" onclick="selectLocation('market');">Market</div>
+					</div>
+				
+				</div>
+				
+				<div class="col-7">
+					
+					<div id="gardenSpace" class="locationSpace row">
+						<div id="plotOne" class="gardenPlot" onclick="selectPlot('plotOne');">
+							<div id="plotOneProgress" class="progressBar grow"></div><div id="plotOneWater" class="progressBar water"></div><div id="plotOneHarvest" class="progressBar harvest hidden"></div>
+						</div>
+						<div id="plotTwo" class="gardenPlot" onclick="selectPlot('plotTwo');">
+							<div id="plotTwoLocked" class="locked">Cost: 50</div>
+							<div id="plotTwoProgress" class="progressBar grow"></div><div id="plotTwoWater" class="progressBar water"></div><div id="plotTwoHarvest" class="progressBar harvest hidden"></div>
+						</div>
+						<div id="plotThree" class="gardenPlot" onclick="selectPlot('plotThree');">
+							<div id="plotThreeLocked" class="locked">Cost: 2000</div>
+							<div id="plotThreeProgress" class="progressBar grow"></div><div id="plotThreeWater" class="progressBar water"></div><div id="plotTwoHarvest" class="progressBar harvest hidden"></div>
+						</div>
+						<div id="plotFour" class="gardenPlot" onclick="selectPlot('plotFour');">
+							<div id="plotFourLocked" class="locked">Cost: 425000</div>
+							<div id="plotFourProgress" class="progressBar grow"></div><div id="plotFourWater" class="progressBar water"></div><div id="plotTwoHarvest" class="progressBar harvest hidden"></div>
+						</div>
+						
+					</div>
+					
+					<div id="marketSpace" class="locationSpace row hidden">
+					
+						<div id="seedSales" class="marketSection">
+							<div id="seedSalesTitle" class="title">Purchase Seeds</div>
+							<div id="seedsForSale" class="itemSpace marketSpace"></div>
+						</div>
+						
+						<div id="inventorySales" class="marketSection">
+							<div id="inventorySalesTitle" class="title">Sell Stock</div>
+							<div id="inventoryToSell" class="itemSpace marketSpace"></div>
+						</div>
+						
+					</div>
+					
+					<div id="librarySpace" class="locationSpace row hidden">
+						<div class="title">Library</div>
+						<div id="libraryItems" class="itemSpace librarySpace"></div>
+					</div>
+					
+				</div>
+				
+				<div class="col-1">
+					
+					<div id="actionItems" class="row">
+						<div id="waterAction" class="actionButton" onclick="selectAction('water');">Water</div><div id="harvestAction" class="actionButton" onclick="selectAction('harvest');">Harvest</div>
+					</div>
+					
+				</div>
+				
+				<div class="col-3">
+					
+					<div class="row">
+					
+						<div id="seedsMenu">
+							<div id="seedsTitle" class="title">Seeds</div>
+							<div id="seeds" class="itemSpace"></div>
+						</div>
+						
+					</div>
+					
+					<div class="row">
+					
+						<div id="inventoryMenu">
+							<div id="inventoryTitle" class="title">Inventory</div>
+							<div id="inventory" class="itemSpace"></div>
+						</div>
+						
+					</div>
+					
+					<div class="row">
+						<div id="gold" class="title" onclick="showstuff();"></div>
+					</div>
+					
+					<div class="row">
+						<div id="acheivementMenu" class="title col-6" onclick="toggleModal('acheivementsModal');">Acheivements</div>
+						<div id="settingsMenu" class="title" onclick="resetGameData();">Settings</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			<div id="acheivementsModal" onclick="toggleModal('acheivementsModal');">
+				<div id="acheivementContent">
+					<div class="title">Acheivements</div>
+					<div id="acheivementSection" class="row">
+						<div id="highlightedAcheivement"><img id="highlightedIcon"></img><div id="highlightedInfo"></div></div><div id="acheivementSpace" class="acheivementSpace"></div>
+					</div>
+				</div>
+			</div>
+	
+		</div>
+	
+	
+	
+	
+	<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
